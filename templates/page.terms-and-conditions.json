@@ -1,0 +1,77 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_qpRf3N": {
+      "type": "rich-text",
+      "blocks": {
+        "text_zWXrez": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><ul><li><strong>No personal checks please - we accept all major credit cards and Apple Pay/Google Wallet, and cash. </strong></li></ul><p></p><ul><li><strong>Special Orders and Layaways require a 30% deposit.</strong></li></ul><p></p><ul><li><strong>We charge a 20% restocking fee for cancelled Special Orders after they have shipped from our suppliers.</strong></li></ul><p></p><ul><li><strong>After 30 days, unclaimed repair items will be deemed 'abandoned' and will incur a $5 per day storage fee.</strong></li></ul><p></p><ul><li><strong>After 90 days, abandoned items will become the property of Al's Bike Shop, and may be sold or disposed of at our discretion. </strong></li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "text_zWXrez"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_QajJzP": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Lby6xL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Return and Refund Policy",
+            "heading_size": "h1"
+          }
+        },
+        "text_E3ffTc": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>New bikes and merchandise may be returned for a full refund as long as it has been no more than 30 calendar days from the date of original purchase. We will only accept the return if it is: </strong></p><ul><li><strong>Still in showroom condition with no signs of wear, and has not been modified or personalized in any way.</strong></li></ul><p></p><ul><li><strong>Must be accompanied by an original receipt, or an electronic record with the associated customer name/phone number.</strong></li></ul><p></p><ul><li><strong>Credit Card and Electronic payments (Apple Pay, Google Wallet, etc.) will be only refunded via the original payment method.</strong></li></ul><p></p><ul><li><strong>Cash payments will only be refunded up to $50, and any additional balance will be paid via a shop credit.<br/></strong></li></ul><p><strong>Al's Bike Shop charges a 20% restocking fee for all returned 'special order' bikes that have been shipped from our suppliers.</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Lby6xL",
+        "text_E3ffTc"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_qpRf3N",
+    "rich_text_QajJzP"
+  ]
+}

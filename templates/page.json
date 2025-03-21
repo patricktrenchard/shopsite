@@ -1,0 +1,166 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_YMb87H": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_dMT4ay": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Bike",
+            "heading_size": "h1"
+          }
+        },
+        "text_xXdDWi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Select from parts tested by local experts on your trails. Rigorously vetted for performance, these components ensure top reliability where you ride.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_dMT4ay",
+        "text_xXdDWi"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/download.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_tw6npE": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "/* Simplified CSS for the Build a Bike Section */.bike-builder-container {text-align: center; max-width: 900px; margin: auto; padding: 20px;}",
+        ".bike-parts-list {display: flex; justify-content: center;}",
+        ".bike-parts-list table {width: 80%; /* Adjust width to prevent full width stretch */ max-width: 700px; border-collapse: collapse; margin: auto;}",
+        ".bike-parts-list th,.bike-parts-list td {padding: 8px; border: 1px solid #ddd;}",
+        ".buy-button {background: #d69074; color: white; padding: 8px; text-decoration: none;}"
+      ],
+      "settings": {
+        "custom_liquid": "{% comment %}\nThis Liquid template creates a \"Build a Bike\" section similar to the PCPartPicker screenshot.\nIt includes a bike image, a list of parts, and buttons linking to specific products on JensonUSA.\n{% endcomment %}\n\n\n    <div class=\"bike-parts-list\">\n        <table>\n            <thead>\n                <tr>\n                    <th>Component</th>\n                    <th>Price</th>\n                    <th>Link</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr>\n                    <td>Frame</td>\n                    <td>$3,799.99</td>\n                    <td><a href=\"https://www.jensonusa.com/SANTA-CRUZ-HIGHTOWER-3-CC-SDU-FRAME-3?loc=usa&gad_source=1&gclid=CjwKCAiA74G9BhAEEiwA8kNfpbum0B6WNtoCgksFj-crsRDq_cCah14E33pjhPtMQAty6yUB_agEcRoCXWAQAvD_BwE\" target=\"_blank\" class=\"buy-button\">Buy</a></td>\n                </tr>\n                <tr>\n                    <td>Wheels</td>\n                    <td>$1,299.99</td>\n                    <td><a href=\"https://www.jensonusa.com/ENVE-M630-29-Industry-Nine-1-1-Wheelset\" target=\"_blank\" class=\"buy-button\">Buy</a></td>\n                </tr>\n                <tr>\n                    <td>Drivetrain</td>\n                    <td>$499.99</td>\n                    <td><a href=\"https://www.jensonusa.com/SRAM-GX-Eagle-12-Speed-Groupset\" target=\"_blank\" class=\"buy-button\">Buy</a></td>\n                </tr>\n                <tr>\n                    <td>Brakes</td>\n                    <td>$249.99</td>\n                    <td><a href=\"https://www.jensonusa.com/Shimano-XT-BR-M8120-Disc-Brake\" target=\"_blank\" class=\"buy-button\">Buy</a></td>\n                </tr>\n                <tr>\n                    <td>Saddle & Accessories</td>\n                    <td>$149.99</td>\n                    <td><a href=\"https://www.jensonusa.com/WTB-Volt-Saddle\" target=\"_blank\" class=\"buy-button\">Buy</a></td>\n                </tr>\n                <tr>\n                    <td>Tires</td>\n                    <td>$45</td> <!-- Placeholder Price -->\n                    <td><a href=\"https://www.jensonusa.com/Maxxis-Assegai-275-Trail-OEM-Tire-No-Packaging-2?loc=usa&gad_source=1&gbraid=0AAAAAo8ahOwzfov9E6FKfZEOEcguQkEeI&gclid=CjwKCAiA74G9BhAEEiwA8kNfpU2bDeEYXNBYQ6c9238jTljHXQRETtDMyAFriTHQPek3DlPjA8dYhRoCW0sQAvD_BwE\" target=\"_blank\" class=\"buy-button\">Buy</a></td> <!-- Placeholder Link -->\n                </tr>\n                <tr>\n                    <td>Front Suspension</td>\n                    <td>$349</td> <!-- Placeholder Price -->\n                    <td><a href=\"https://www.jensonusa.com/Fox-38-Float-Factory-GRIP-2-275-2022-1\" target=\"_blank\" class=\"buy-button\">Buy</a></td> <!-- Placeholder Link -->\n                </tr>\n                <tr>\n                    <td>Rear Suspension</td>\n                    <td>$249.99</td> <!-- Placeholder Price -->\n                    <td><a href=\"https://www.jensonusa.com/Fox-Float-X2-Factory-2022-3?loc=usa&gad_source=1&gbraid=0AAAAAo8ahOwzfov9E6FKfZEOEcguQkEeI&gclid=CjwKCAiA74G9BhAEEiwA8kNfpQs7_J9zAVqtGmmhRfXxYoKlc_puCtERIfm0TkJrU8ljjSFZswGUxBoCFY0QAvD_BwE\" target=\"_blank\" class=\"buy-button\">Buy</a></td> <!-- Placeholder Link -->\n                </tr>\n            </tbody>\n        </table>\n    </div>\n</div>\n\n<script>\n    document.addEventListener(\"DOMContentLoaded\", function() {\n        document.querySelectorAll(\".buy-button\").forEach(button => {\n            button.addEventListener(\"click\", function(event) {\n                event.preventDefault(); // Prevents default anchor link behavior\n                window.open(this.getAttribute(\"href\"), \"_blank\");\n            });\n        });\n    });\n</script>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection_b63BbQ": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Road Bike",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_4BBqKq": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Gravel Bike",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_9VnAfH": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Another bike",
+        "heading_size": "h1",
+        "description": "<p>this is a bike</p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_YMb87H",
+    "custom_liquid_tw6npE",
+    "featured_collection_b63BbQ",
+    "featured_collection_4BBqKq",
+    "featured_collection_9VnAfH"
+  ]
+}

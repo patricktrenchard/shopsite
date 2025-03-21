@@ -1,0 +1,37 @@
+{% comment %}
+  This section loops through all metaobject entries for your "trail" (or "trails")
+  definition and displays their fields.
+{% endcomment %}
+
+{% assign trails = metaobjects.trails %} 
+{%- comment -%}
+  ^ If your metaobject definition is called "trail" in the admin, 
+  then you’d use `metaobjects.trail` instead.
+{%- endcomment -%}
+
+<section class="local-trails">
+  {% if trails and trails.size > 0 %}
+    {% for trail in trails %}
+      <article class="local-trails__item">
+        <h2>
+          {{ trail.fields.trail_name.value | escape }}
+        </h2>
+
+        <p>
+          {{ trail.fields.Description.value }}
+          {%- comment -%}
+            If your field handle is actually "description" (all lowercase),
+            then use `trail.fields.description.value` here.
+          {%- endcomment -%}
+        </p>
+
+        <p>
+          <strong>Latitude:</strong> {{ trail.fields.Latitude.value }}<br>
+          <strong>Longitude:</strong> {{ trail.fields.Longitude.value }}
+        </p>
+      </article>
+    {% endfor %}
+  {% else %}
+    <p>No local trails available right now.</p>
+  {% endif %}
+</section>

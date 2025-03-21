@@ -1,0 +1,106 @@
+{% schema %}
+{
+  "name": "Slide Show",
+  "settings": []
+}
+{% endschema %}
+{% comment %}
+ newly added custom slide show
+{% endcomment %}
+
+<section class="slide-img">
+  <div class="container">
+    <div class="panel" style="background-image: url('https://cdn.shopify.com/s/files/1/0929/2555/9060/files/slide_show_1.webp?v=1739048223');">
+    </div>
+    <div class="panel" style="background-image: url('https://cdn.shopify.com/s/files/1/0929/2555/9060/files/slide_show_4.jpg?v=1739048223');">
+    </div>
+    <div class="panel active" style="background-image: url('https://cdn.shopify.com/s/files/1/0929/2555/9060/files/slide_show_2.webp?v=1739048223');">
+    </div>
+    <div class="panel" style="background-image: url('https://cdn.shopify.com/s/files/1/0929/2555/9060/files/slide_show_3.jpg?v=1739048223');">
+    </div>
+    <div class="panel" style="background-image: url('https://cdn.shopify.com/s/files/1/0929/2555/9060/files/slide_show_5.jpg?v=1739048512');">
+    </div>
+    <div class="panel" style="background-image: url('https://cdn.shopify.com/s/files/1/0929/2555/9060/files/slide_show_6.jpg?v=17390485113');">
+    </div>
+  </div>
+</section>
+
+<style>
+*{
+  box-sizing: border-box;
+}
+
+.container{
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.panel{
+  height: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 40px;
+  color: #000000;
+  cursor: pointer;
+  flex: 1;
+  margin: 2px;
+  position: relative;
+  transition: 2s 0s;
+  border: 5px solid black;
+}
+
+.panel h3{
+  font-size: 20px;
+  margin: 0;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+  }
+
+.panel.active{
+  flex: 5;
+}
+{% comment %} h3{
+  padding: 5px;
+} {% endcomment %}
+{% comment %} .panel.active h3{
+  opacity: 1;
+  transition: 4s 0.5s;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(250, 128, 114);
+  background-color: #17202a;
+  border: 2px solid rgb(250, 128, 114);
+  border-radius: 20px;
+} {% endcomment %}
+@media (max-width: 1430px){
+    .panel.active h3{
+        display: none;
+    }
+}
+</style>
+
+<script>
+  const panels = document.querySelectorAll(".panel");
+
+  panels.forEach((item) => {
+    item.addEventListener("click", () => {
+      removeActive();
+      item.classList.add("active");
+    });
+  });
+
+  function removeActive(){
+    panels.forEach((item) => {
+      item.classList.remove("active");
+    });
+  }
+</script>
+
+
