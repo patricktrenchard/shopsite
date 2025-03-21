@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Filter Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .search-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    select {
+      padding: 10px;
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .product img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .product h2 {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .product p {
+      color: #666;
+      margin: 5px 0;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<h1>Product Filter Example</h1>
+
+<!-- Search and Filter -->
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search for products..." />
+  <select id="categoryFilter">
+    <option value="all">All Categories</option>
+    <option value="tires">Tires</option>
+    <option value="bikes">Bikes</option>
+  </select>
+</div>
+
+<!-- Product List -->
+<div class="product-list" id="productList">
+  <!-- Example products -->
+  <div class="product" data-category="tires">
+    <img src="https://via.placeholder.com/150?text=Tire+1" alt="Tire 1" />
+    <h2>Road Tire</h2>
+    <p>$29.99</p>
+  </div>
+
+  <div class="product" data-category="bikes">
+    <img src="https://via.placeholder.com/150?text=Bike+1" alt="Bike 1" />
+    <h2>Mountain Bike</h2>
+    <p>$499.99</p>
+  </div>
+
+  <div class="product" data-category="tires">
+    <img src="https://via.placeholder.com/150?text=Tire+2" alt="Tire 2" />
+    <h2>Mountain Tire</h2>
+    <p>$34.99</p>
+  </div>
+
+  <div class="product" data-category="bikes">
+    <img src="https://via.placeholder.com/150?text=Bike+2" alt="Bike 2" />
+    <h2>Road Bike</h2>
+    <p>$699.99</p>
+  </div>
+
+  <div class="product" data-category="bikes">
+    <img src="https://via.placeholder.com/150?text=Bike+3" alt="Bike 3" />
+    <h2>Electric Bike</h2>
+    <p>$999.99</p>
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+  const searchInput = document.getElementById('searchInput');
+  const categoryFilter = document.getElementById('categoryFilter');
+  const productList = document.getElementById('productList');
+  const products = productList.getElementsByClassName('product');
+
+  // Function to filter products
+  function filterProducts() {
+    const searchValue = searchInput.value.toLowerCase(); // Search input value
+    const selectedCategory = categoryFilter.value; // Selected category value
+
+    Array.from(products).forEach(product => {
+      const productName = product.querySelector('h2').textContent.toLowerCase();
+      const productCategory = product.getAttribute('data-category');
+
+      // Matching logic: name + category
+      const isCategoryMatch = selectedCategory === 'all' || productCategory === selectedCategory;
+      const isNameMatch = productName.includes(searchValue);
+
+      if (isCategoryMatch && isNameMatch) {
+        product.style.display = 'block';
+      } else {
+        product.style.display = 'none';
+      }
+    });
+  }
+
+  // Event listeners for search and category filter
+  searchInput.addEventListener('input', filterProducts);
+  categoryFilter.addEventListener('change', filterProducts);
+
+  // Initialize on page load
+  filterProducts();
+</script>
+
+</body>
+</html>
